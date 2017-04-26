@@ -7,8 +7,7 @@ Authors:
 README!
 
 1) Script doesn't have login and register functions, so if you want create post use strona.php but first secure this file - for example use .htaccess :)
-2) Please don't remove comments with authors of this script! We haven't place this informations in footer because we want this info in script.
-3) Remember, before using this script, create database :)
+2) Remember, before using this script, create database :)
 
 - create file (sitesitesite.php) paste this code and run in browser (www.yoursitename.tld/sitesitesite.php):
 
@@ -24,8 +23,8 @@ $cdt->close();
 - database must be aside from public_html
 - database must have chmod 700 (for www-data) or 770 (for www-data:usergroup)
 
-4) This is script for minimal site, so if you want more features then wait for the next update or do it yourself.
-5) In free time we have in plans:
+3) This is script for minimal site, so if you want more features then wait for the next update or do it yourself.
+4) In free time we have in plans:
 - adding site for posts (mean every post have address)
 - adding us first bootstrap template
 - adding security for strona.php
