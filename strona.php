@@ -45,13 +45,9 @@
 
 <?php
 require('config.php');
-if ($_POST) {
-    echo '<pre>';
-    echo htmlspecialchars($_POST, true);
-    echo '</pre>';
-}
-$wpis=$_POST['wpis'];
-$tytul=$_POST['tytul'];
+require('functions.php');
+$wpis=parser_string($_POST['wpis']);
+$tytul=parser_string($_POST['tytul']);
 //$data = datetime('now');
 $mydate=getdate(date("U"));
 $datatime="$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
