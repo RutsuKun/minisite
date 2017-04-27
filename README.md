@@ -2,7 +2,8 @@
 Authors:
 - site and panel script: Ferexio^ & Fervi
 - panel template: Heniooo
-- script version: 1.0
+- protection against SQL Injection: gilek
+- script version: 1.1
 
 README!
 
