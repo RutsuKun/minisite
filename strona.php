@@ -44,15 +44,20 @@
 </section>
 
 <?php
-require('config.php');
-require('functions.php');
-$wpis=parser_string($_POST['wpis']);
-$tytul=parser_string($_POST['tytul']);
-//$data = datetime('now');
-$mydate=getdate(date("U"));
-$datatime="$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
-$addnotka = $asd->query("INSERT INTO asd (tytul, tekst, data) VALUES('$tytul','$wpis','$datatime');");
-$asd->close();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	require('config.php');
+
+	$entry = $_POST['wpis'];
+	$title = $_POST['tytul'];
+	$date = date('l, F d, Y');
+
+	$stmt = $asd->prepare('INSERT INTO asd (tytul, tekst, data) VALUES(:title, :entry, :date);');
+	$stmt->bindValue(':title', $title, SQLITE3_TEXT);
+	$stmt->bindValue(':entry', $entry, SQLITE3_TEXT);
+	$stmt->bindValue(':date', $date, SQLITE3_TEXT);
+	$result = $stmt->execute();
+	$asd->close();
+}
 ?>
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
