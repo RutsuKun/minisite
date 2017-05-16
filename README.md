@@ -33,3 +33,5 @@ $cdt->close();
 Want more ? Write notification: https://github.com/ferexio/minisite/issues
 
 Example: https://uw311.mikr.us
+
+Of course you can use Sourceforge.net as hosting for your website ;)
