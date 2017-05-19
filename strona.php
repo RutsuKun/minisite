@@ -47,16 +47,16 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	require('config.php');
 
-	$entry = $_POST['wpis'];
-	$title = $_POST['tytul'];
+	$entry = $_POST['news'];
+	$title = $_POST['title'];
 	$date = date('l, F d, Y');
 
-	$stmt = $asd->prepare('INSERT INTO asd (tytul, tekst, data) VALUES(:title, :entry, :date);');
+	$stmt = $db->prepare('INSERT INTO tablename (title, news, date) VALUES(:title, :entry, :date);');
 	$stmt->bindValue(':title', $title, SQLITE3_TEXT);
 	$stmt->bindValue(':entry', $entry, SQLITE3_TEXT);
 	$stmt->bindValue(':date', $date, SQLITE3_TEXT);
 	$result = $stmt->execute();
-	$asd->close();
+	$db->close();
 }
 ?>
 
