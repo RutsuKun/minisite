@@ -3,7 +3,7 @@ Authors:
 - site and panel script: Ferexio^ & Fervi
 - panel template: Heniooo
 - protection against SQL Injection: gilek
-- script version: 1.1
+- script version: 1.2
 
 README!
 
@@ -15,7 +15,7 @@ README!
 ```php
 <?php
 $cdt = new SQLite3('/path/to/database/file.sqlite');
-$createtable = $cdt->query('CREATE TABLE asd(id ID INTEGER PRIMARY KEY AUTOINCREMENT, title varchar(200), news text, date datetime);');
+$createtable = $cdt->query('CREATE TABLE tablename(ID INTEGER PRIMARY KEY AUTOINCREMENT, title varchar(200), news text, date datetime);');
 $cdt->close();
 ?>
 ```
