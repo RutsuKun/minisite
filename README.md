@@ -15,7 +15,7 @@ README!
 ```php
 <?php
 $cdt = new SQLite3('/path/to/database/file.sqlite');
-$createtable = $cdt->query('CREATE TABLE asd(id ID INTEGER PRIMARY KEY AUTOINCREMENT, tytul varchar(200), tekst text, data datetime);');
+$createtable = $cdt->query('CREATE TABLE asd(id ID INTEGER PRIMARY KEY AUTOINCREMENT, title varchar(200), news text, date datetime);');
 $cdt->close();
 ?>
 ```
@@ -29,6 +29,8 @@ $cdt->close();
 - adding site for posts (mean every post have address)
 - adding us first bootstrap template
 - adding security for strona.php
+
+5) Description about script is in the readme.txt file
 
 Want more ? Write notification: https://github.com/ferexio/minisite/issues
 
