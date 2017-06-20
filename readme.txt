@@ -9,6 +9,7 @@ Authors:
 * panel template: Heniooo
 * protection against SQL Injection: gilek
 * script version: 1.2
+* pagination by Fervi
 
 --------------------------------------------------------------
 
