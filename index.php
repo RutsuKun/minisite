@@ -3,12 +3,26 @@ require('config.php');
 require('header.html');
 if(empty($_GET['id']))
 {
+if(empty($_GET['page']))
+{
+$page=1;
+}
+else
+{
+$page=$_GET['page'];
+}
+for($i=($ic2['count'])-(($page-1)*$app); $i>(($ic2['count'])-(($page-1)*$app))-1; $i--)
+{
 while($row = $dbs->fetchArray(SQLITE3_ASSOC)){
 	$tfr = $row['news'];
         $stags = strip_tags($tfr, $tags);
 	echo '<hr><center><b><a href="index.php?id='.$nic.'" style="text-decoration: none;">'.$row['title'].'</a></b></center><hr>Added at: '.$row['date'].'<br><br>'.$stags.'<br><br>';
 	$nic = $nic - 1;
    }
+}
+for ($i=1; $i <= ($ic2['count']/$app); $i++)
+{
+echo '<a href="index.php?page='.$i.'"><b>&nbsp'.$i.'&nbsp</b></a>';
 }
 else
 {
