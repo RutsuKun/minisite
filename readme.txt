@@ -54,6 +54,7 @@ in table asd
 $ic - counts all news in table asd
 $nic - id of specific news
 $tags - html/css tags which is to be ignored by strip_tags
+$app - articles per page
 
 tablename - change this name if you want ;)
 
