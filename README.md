@@ -26,9 +26,10 @@ $cdt->close();
 
 3) This is script for minimal site, so if you want more features then wait for the next update or do it yourself.
 4) In free time we have in plans:
-- adding site for posts (mean every post have address)
 - adding us first bootstrap template
 - adding security for strona.php
+
+Only to do: pagination
 
 5) Description about script is in the readme.txt file
 
