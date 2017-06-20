@@ -4,6 +4,7 @@ Authors:
 - panel template: Heniooo
 - protection against SQL Injection: gilek
 - script version: 1.2
+- pagination by Fervi
 
 README!
 
@@ -28,8 +29,6 @@ $cdt->close();
 4) In free time we have in plans:
 - adding us first bootstrap template
 - adding security for strona.php
-
-Only to do: pagination
 
 5) Description about script is in the readme.txt file
 
