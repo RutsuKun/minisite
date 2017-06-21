@@ -1,6 +1,7 @@
 <?php
 require('config.php');
 require('header.html');
+require('navbar.html');
 if(empty($_GET['id']))
 {
 if(empty($_GET['page']))
@@ -16,7 +17,15 @@ for($i=($ic2['count'])-(($page-1)*$app); $i>(($ic2['count'])-(($page-1)*$app))-1
 while($row = $dbs->fetchArray(SQLITE3_ASSOC)){
 	$tfr = $row['news'];
         $stags = strip_tags($tfr, $tags);
-	echo '<hr><center><b><a href="index.php?id='.$nic.'" style="text-decoration: none;">'.$row['title'].'</a></b></center><hr>Added at: '.$row['date'].'<br><br>'.$stags.'<br><br>';
+	echo'
+		<div class="card notka">
+		<div class="card-block">
+		<h4 class="card-title"><a href="index.php?id='.$nic.'" style="text-decoration: none;">'.$row['title'].'</a></h4>
+		<h6 class="card-subtitle mb-2 text-muted">'.$row['date'].'</h6>
+		<p class="card-text">'.$stags.'</p>
+		<a href="#" class="card-link">First link</a>
+		<a href="#" class="card-link">Second link</a></div></div>
+        ';
 	$nic = $nic - 1;
    }
 }
