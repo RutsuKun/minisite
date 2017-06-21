@@ -44,9 +44,17 @@ if(!empty($file))
 	while($row = $file->fetchArray(SQLITE3_ASSOC)){
 	$tfr = $row['news'];
 	$stags = strip_tags($tfr, $tags);
-	echo '<hr><center><b><a href="index.php?id='.$gid.'" style="text-decoration: none;">'.$row['title'].'</a></b></center><hr>Added at: '.$row['date'].'<br><br>'.$stags.'<br><br>';
+	echo'
+		<div class="card notka">
+		<div class="card-block">
+		<h4 class="card-title"><a href="index.php?id='.$nic.'" style="text-decoration: none;">'.$row['title'].'</a></h4>
+		<h6 class="card-subtitle mb-2 text-muted">'.$row['date'].'</h6>
+		<p class="card-text">'.$stags.'</p>
+		<a href="#" class="card-link">First link</a>
+		<a href="#" class="card-link">Second link</a>
+		<center><h4><font style="color: #f39c12"><i>~~~~~~~~~~ Comments ~~~~~~~~~~</i></font></h4></center></div></div>
+        ';
 }
-echo'<center><h4><font style="color: blue;"><i>~~~~~~~~~~ Comments ~~~~~~~~~~</i></font></h4></center>';
 }
 }
 else
