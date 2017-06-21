@@ -5,6 +5,7 @@ Authors:
 - protection against SQL Injection: gilek
 - script version: 1.2
 - pagination by Fervi
+- site template: Heniooo
 
 README!
 
@@ -27,7 +28,6 @@ $cdt->close();
 
 3) This is script for minimal site, so if you want more features then wait for the next update or do it yourself.
 4) In free time we have in plans:
-- adding us first bootstrap template
 - adding security for strona.php
 
 5) Description about script is in the readme.txt file
