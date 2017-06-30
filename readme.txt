@@ -53,7 +53,6 @@ $db - location of the database file
 $dbs - select all rows in database with sort by ID
 in table asd
 $ic - counts all news in table asd
-$nic - id of specific news
 $tags - html/css tags which is to be ignored by strip_tags
 $app - articles per page
 
