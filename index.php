@@ -53,7 +53,7 @@ if(!empty($file))
 	echo'
 		<div class="card notka">
 		<div class="card-block">
-		<h4 class="card-title"><a href="index.php?id='.$nic.'" style="text-decoration: none;">'.$row['title'].'</a></h4>
+		<h4 class="card-title"><a href="index.php?id='.$gid.'" style="text-decoration: none;">'.$row['title'].'</a></h4>
 		<h6 class="card-subtitle mb-2 text-muted">'.$row['date'].'</h6>
 		<p class="card-text">'.$stags.'</p>
 		<a href="#" class="card-link">First link</a>
